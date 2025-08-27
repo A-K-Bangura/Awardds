@@ -57,7 +57,7 @@ const Hero = () => {
       borderRadius: "0 0 0 0",
       ease: "power1inOut",
       scrollTrigger: {
-        trigger: "#videoframe",
+        trigger: "#video-frame",
         start: "center-center",
         end: "bottom center",
         scrub: true,
@@ -77,7 +77,7 @@ const Hero = () => {
     if (loadedVideo === videoSources.length - 1) {
       setIsLoading(false);
     }
-  }, [loadedVideo]);
+  }, [loadedVideo, videoSources.length]);
 
   const handleVideoLoad = () => {
     setLoadedVideo((prev) => prev + 1);
@@ -137,7 +137,7 @@ const Hero = () => {
           <video
             src={getVideoSource(currentIndex)}
             loop
-            // autoPlay
+            autoPlay
             muted
             id="next-video"
             className="left-0 top-0 absolute size-full object-cover object-center"
