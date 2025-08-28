@@ -80,6 +80,18 @@ body {
   .floating-nav {
     @apply bg-black rounded-lg border;
   }
+  .story-img-container {
+    @apply relative  h-[90vh] md:h-dvh w-full;
+    filter: url("#flt_tag");
+  }
+  .story-img-mask {
+    @apply absolute max-md:top-[200px] left-0 top-0 size-full overflow-hidden md:left-[15%] md:top-[17%] md:size-4/5;
+    clip-path: polygon(4% 0, 83% 21%, 100% 73%, 0% 100%);
+  }
+  .story-img-content {
+    @apply absolute w-full md:h-dvh h-[50dvh] opacity-100 left-10 top-16 md:left-0 md:top-10 lg:left-[-300px] lg:top-[-100px];
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0) rotateZ(0) scale(1);
+  }
   .hero-heading {
     @apply uppercase tracking-tighter font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-8xl lg:text-[8rem];
   }
@@ -98,6 +110,16 @@ body {
   }
   .nav-hover-btn {
     @apply relative ms-10 font-general text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+  }
+  .sword-man-clip-path {
+    clip-path: polygon(16% 0, 89% 15%, 75% 100%, 0 97%);
+  }
+  .contact-clip-path-1 {
+    clip-path: polygon(25% 0%, 74% 0, 69% 64%, 34% 73%);
+  }
+
+  .contact-clip-path-2 {
+    clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
   }
 
   .animated-word {

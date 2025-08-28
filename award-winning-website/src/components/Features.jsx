@@ -23,6 +23,8 @@ const BentoTilt = ({ children, className = "" }) => {
     const tiltX = (relativeY - 0.5) * 5;
     const tiltY = (relativeX - 0.5) * -5;
 
+    height;
+
     const newTramsform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(0.98,0.98,0.98)`;
 
     setTransformStyle(newTramsform);
